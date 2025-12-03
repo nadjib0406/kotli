@@ -19,7 +19,15 @@ buildscript {
     classpath("org.jacoco:org.jacoco.core:0.8.9")
     classpath("com.vanniktech:gradle-android-junit-jacoco-plugin:0.17.0-SNAPSHOT")
     classpath("dev.ahmedmourad.nocopy:nocopy-gradle-plugin:1.4.0")
+    classpath("com.google.dagger:hilt-android-gradle-plugin:$daggerHiltVersion")
+
   }
+}
+plugins {
+  id("com.android.application") version "7.4.2" apply false
+  id("com.diffplug.spotless") version "6.12.1" apply false
+  id("com.github.ben-manes.versions") version "0.46.0" apply false
+  id("org.jetbrains.kotlin.jvm") version "1.9.10" apply false
 }
 
 subprojects {
